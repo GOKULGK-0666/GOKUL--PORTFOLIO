@@ -1,0 +1,92 @@
+import { useState } from 'react'
+import { ExternalLink, PlayCircle, Sparkles } from 'lucide-react'
+
+const projects = [
+  {
+    number: '01',
+    title: 'CyberIntel',
+    type: 'AI-powered full-stack cybersecurity platform',
+    description: 'A final-year team capstone full-stack platform for AI-driven cybersecurity intelligence gathering, real-time threat monitoring, data visualization, and structured reporting, built with React, TypeScript, Node.js, and MongoDB.',
+    tags: ['React', 'TypeScript', 'Node.js', 'MongoDB'],
+    color: 'coral',
+    video: '/assets/project-videos/cyberintel.mp4',
+  },
+  {
+    number: '02',
+    title: 'Food E-Commerce Web Application',
+    type: 'Personal full-stack project',
+    description: 'A responsive food ordering platform with menu listings, cart functionality, clean state management, and RESTful APIs for core commerce features.',
+    tags: ['React', 'Node.js', 'Express.js', 'MongoDB'],
+    color: 'blue',
+    video: '/assets/project-videos/e-commerce.mp4',
+  },
+  {
+    number: '03',
+    title: 'Netflix Clone',
+    type: 'Streaming platform interface',
+    description: 'A responsive Netflix-inspired application that fetches real-time movie and TV content from the TMDB API, with routing and conditional rendering.',
+    tags: ['React', 'Node.js', 'CSS3', 'TMDB API'],
+    color: 'green',
+    video: '/assets/project-videos/netflix-clone.mp4',
+  },
+]
+
+function ProjectVideo({ project }) {
+  const [videoUnavailable, setVideoUnavailable] = useState(false)
+
+  return (
+    <div className={`project-visual ${project.color}`}>
+      <span className="project-number">{project.number}</span>
+      {videoUnavailable ? (
+        <div className="video-empty">
+          <PlayCircle size={34} />
+          <span>Project video</span>
+          <small>Add {project.video.split('/').pop()} to public/assets/project-videos</small>
+        </div>
+      ) : (
+        <video
+          className="project-video"
+          src={project.video}
+          controls
+          preload="metadata"
+          onError={() => setVideoUnavailable(true)}
+        />
+      )}
+      <Sparkles className="sparkle" size={20} />
+    </div>
+  )
+}
+
+function Projects() {
+  return (
+    <section className="work section" id="work">
+      <div className="section-heading">
+        <div className="section-label">02 — Selected work</div>
+        <p>Full-stack projects built with curiosity and purpose.</p>
+      </div>
+      <div className="project-list">
+        {projects.map((project, index) => (
+          <div className="project-step" key={project.number}>
+            <article className={`project-card ${index % 2 ? 'reverse' : ''}`}>
+              <ProjectVideo project={project} />
+              <div className="project-info">
+                <div>
+                  <span className="project-type">{project.type}</span>
+                  <h3>{project.title}</h3>
+                  <p>{project.description}</p>
+                  <div className="tags">{project.tags.map(tag => <span key={tag}>{tag}</span>)}</div>
+                </div>
+              </div>
+            </article>
+            {index < projects.length - 1 && <div className="project-connector" aria-hidden="true"><span /></div>}
+          </div>
+        ))}
+      </div>
+      <a className="projects-more view-more" href="https://github.com/GOKULGK-0666" target="_blank" rel="noreferrer">
+        View all projects <ExternalLink size={14} />
+      </a>
+    </section>
+  )
+}
+
+export default Projects
