@@ -5,7 +5,7 @@ const projects = [
   {
     number: '01',
     title: 'CyberIntel',
-    type: 'AI-powered full-stack cybersecurity platform',
+    type: 'AI-Powered Full-Stack Cybersecurity Platform',
     description: 'A final-year team capstone full-stack platform for AI-driven cybersecurity intelligence gathering, real-time threat monitoring, data visualization, and structured reporting, built with React, TypeScript, Node.js, and MongoDB.',
     tags: ['React', 'TypeScript', 'Node.js', 'MongoDB'],
     color: 'coral',
@@ -14,7 +14,7 @@ const projects = [
   {
     number: '02',
     title: 'Food E-Commerce Web Application',
-    type: 'Personal full-stack project',
+    type: 'Personal Full-Stack Project',
     description: 'A responsive food ordering platform with menu listings, cart functionality, clean state management, and RESTful APIs for core commerce features.',
     tags: ['React', 'Node.js', 'Express.js', 'MongoDB'],
     color: 'blue',
@@ -23,7 +23,7 @@ const projects = [
   {
     number: '03',
     title: 'Netflix Clone',
-    type: 'Streaming platform interface',
+    type: 'Streaming Platform Interface',
     description: 'A responsive Netflix-inspired application that fetches real-time movie and TV content from the TMDB API, with routing and conditional rendering.',
     tags: ['React', 'Node.js', 'CSS3', 'TMDB API'],
     color: 'green',

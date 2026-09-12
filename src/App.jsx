@@ -20,15 +20,15 @@ const skills = [
 const certificates = [
   ['Google AI Essentials', 'Google · Coursera', '2026', 'https://www.coursera.org/account/accomplishments/specialization/GB0D4QY8IOVF'],
   ['Discover the Art of Prompting', 'Google · Coursera', '2026', 'https://www.coursera.org/account/accomplishments/verify/I1D9IS9QU74W'],
-  ['IBM RAG and Agentic AI', 'IBM · Coursera', '2026', 'https://coursera.org/share/a29ff2db5c33ee1f152f8385324adf7f'], 
-  ['Build Multimodal Generative AI Applications', 'IBM · Coursera', '2026', 'https://coursera.org/share/59399806bb457da079a607d22d8d102b'], 
+  ['IBM RAG and Agentic AI', 'IBM · Coursera', '2026', 'https://coursera.org/share/a29ff2db5c33ee1f152f8385324adf7f'],
+  ['Build Multimodal Generative AI Applications', 'IBM · Coursera', '2026', 'https://coursera.org/share/59399806bb457da079a607d22d8d102b'],
   ['Meta Web Development Fundamentals', 'Meta · Coursera', '2026', 'https://www.coursera.org/account/accomplishments/verify/F4LBEF4ENQXG'],
   ['Responsive Web Design', 'freeCodeCamp', '2025', 'https://freecodecamp.org/certification/gokul-0666/responsive-web-design'],
   ['JavaScript Algorithms and Data Structures', 'freeCodeCamp', '2026', 'https://freecodecamp.org/certification/gokul-0666/javascript-algorithms-and-data-structures-v8'],
-  ['AI & Cyber Security Mastery 2026', 'Udemy', '2026', 'https://www.udemy.com/certificate/UC-c2742fc9-b4ff-4c5b-ac52-b51d349c0ff1/'],
-  ['SQL,MYSQL,POSTGRESQL&MONGODB : All in one database ', 'Udemy', '2026', 'https://www.udemy.com/certificate/UC-01aa4646-464c-4575-93ac-417842ad212d/'],
+  ['AI & Cybersecurity Mastery 2026', 'Udemy', '2026', 'https://www.udemy.com/certificate/UC-c2742fc9-b4ff-4c5b-ac52-b51d349c0ff1/'],
+  ['SQL, MySQL, PostgreSQL & MongoDB: All-in-One Database', 'Udemy', '2026', 'https://www.udemy.com/certificate/UC-01aa4646-464c-4575-93ac-417842ad212d/'],
   ['The Complete Python Masterclass: Learn Python', 'Udemy', '2026', 'https://www.udemy.com/certificate/UC-d7419cb9-2938-4417-9b09-79e1a028e080/'],
-  ['Master Website Creation ', 'Udemy', '2026', 'https://www.udemy.com/certificate/UC-00c55626-a5db-4aa0-8926-f9c128c23947/'],
+  ['Master Website Creation', 'Udemy', '2026', 'https://www.udemy.com/certificate/UC-00c55626-a5db-4aa0-8926-f9c128c23947/'],
   ['Learn Graphic Design Using AI Canva Gemini and Grok Imagine', 'Udemy', '2026', 'https://www.udemy.com/certificate/UC-31751740-cd45-4c7c-8816-2a39307d9a58/'],
   // ['Certificate title pending', 'Google Drive certificate', '2026', 'https://drive.google.com/file/d/1k43OHG0HvudsWegbxrjSPzXNX9hENTzA/view?usp=drivesdk'],
   // ['Certificate title pending', 'Google Drive certificate', '2026', 'https://drive.google.com/file/d/1dKBDzuGM6V1n2Aelb5HYnl4KpPsGZBKk/view?usp=drivesdk'],
@@ -95,11 +95,11 @@ function App() {
       <main>
         <section className="hero section" id="home">
           <div className="hero-copy">
-            <div className="eyebrow"><span className="status-dot" /> Available for projects works ·</div>
+            <div className="eyebrow"><span className="status-dot" /> Available for project work ·</div>
             <p className="hero-name hero-reveal"><AnimatedLetters text="HELLO, I'M" /></p>
             <h1 className="hero-reveal">
               <span className="hero-title-letters hero-name-main"><AnimatedLetters text="GOKUL S" /></span>
-              <br /><em className="hero-role"><AnimatedLetters text="MERN stack developer." /></em>
+              <br /><em className="hero-role"><AnimatedLetters text="MERN Stack Developer." /></em>
             </h1>
             <p className="hero-intro hero-reveal"><AnimatedLetters text="MERN Stack Developer with a Computer Science degree and hands-on experience building responsive, scalable web applications." /></p>
             <div className="hero-actions hero-reveal">
@@ -176,10 +176,10 @@ function App() {
 
         <section className="contact section" id="contact">
           <div className="contact-intro"><div className="section-label">07 — Contact</div><h2>Let&apos;s build<br /><em>something useful.</em></h2><p>Have a project, role, or idea in mind? I&apos;d love to hear about it.</p><a href={gmailComposeUrl()} target="_blank" rel="noreferrer" className="email-link">Email me via Gmail <ArrowUpRight size={18} /></a><a href="tel:+919500483963" className="email-link">+91 9500483963 <ArrowUpRight size={18} /></a></div>
-          <form className="contact-form" onSubmit={submitContact}><label>Your name<input required value={form.name} onChange={e => setForm({ ...form, name: e.target.value })} placeholder="GOKUL.S" /></label><label>Email address<input required type="email" value={form.email} onChange={e => setForm({ ...form, email: e.target.value })} placeholder="Mailto@gmail.com" /></label><label>Tell me about it<textarea required rows="3" value={form.message} onChange={e => setForm({ ...form, message: e.target.value })} placeholder="A few words about your project..." /></label><button className="button button-dark" disabled={status === 'sending'}>{status === 'sending' ? 'Sending…' : status === 'sent' ? <><Check size={17} /> Message sent</> : <><Send size={16} /> Send message</>}</button>{status === 'error' && <p className="form-error">Something went wrong. Please email me directly.</p>}</form>
+          <form className="contact-form" onSubmit={submitContact}><label>Your name<input required value={form.name} onChange={e => setForm({ ...form, name: e.target.value })} placeholder="Gokul S" /></label><label>Email address<input required type="email" value={form.email} onChange={e => setForm({ ...form, email: e.target.value })} placeholder="you@example.com" /></label><label>Tell me about it<textarea required rows="3" value={form.message} onChange={e => setForm({ ...form, message: e.target.value })} placeholder="A few words about your project..." /></label><button className="button button-dark" disabled={status === 'sending'}>{status === 'sending' ? 'Sending…' : status === 'sent' ? <><Check size={17} /> Message sent</> : <><Send size={16} /> Send message</>}</button>{status === 'error' && <p className="form-error">Something went wrong. Please email me directly.</p>}</form>
         </section>
       </main>
-      <footer><div className="footer-logo">G<span>.</span>S</div><p>Designed & built with intention.</p><div className="socials"><a href="https://github.com/GOKULGK-0666" aria-label="Github"><Github size={18} /></a><a href="https://www.linkedin.com/in/gokul006" aria-label="LinkedIn"><Linkedin size={18} /></a><a href={gmailComposeUrl()} target="_blank" rel="noreferrer" aria-label="Email"><Mail size={18} /></a></div><span className="copyright">© 2026 Gokul S</span></footer>
+      <footer><div className="footer-logo">G<span>.</span>S</div><p>Designed &amp; built with intention.</p><div className="socials"><a href="https://github.com/GOKULGK-0666" aria-label="GitHub"><Github size={18} /></a><a href="https://www.linkedin.com/in/gokul006" aria-label="LinkedIn"><Linkedin size={18} /></a><a href={gmailComposeUrl()} target="_blank" rel="noreferrer" aria-label="Email"><Mail size={18} /></a></div><span className="copyright">© 2026 Gokul S</span></footer>
     </div>
   )
 }
