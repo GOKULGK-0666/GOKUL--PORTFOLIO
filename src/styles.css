@@ -2,7 +2,7 @@
 
 :root { --paper: #f6f3ed; --ink: #202320; --muted: #77766f; --line: #d9d4ca; --coral: #b48752; --blue: #65766f; --green: #c9d1c8; --glow: rgba(221, 187, 137, .25); }
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 body { margin: 0; color: var(--ink); background: var(--paper); font-family: 'DM Sans', sans-serif; }
 .animated-letters { display: inline-flex; }
 .animated-letter { display: inline-block; opacity: 0; transform: translateY(.45em); animation: letter-in .24s cubic-bezier(.22, .8, .25, 1) forwards; animation-delay: calc(var(--letter-index) * .028s); }
