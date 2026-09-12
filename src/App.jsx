@@ -115,7 +115,7 @@ function App() {
           </div>
           <div className="hero-art" aria-label="Profile photo section">
             <div className="portrait-frame">
-              <img className="portrait-photo" src="/assets/GK.jpeg" alt="Gokul S profile" />
+              <img className="portrait-photo" src={`${import.meta.env.BASE_URL}assets/GK.jpeg`} alt="Gokul S profile" />
               <div className="portrait-caption">Gokul S<br /><small>Developer / maker</small></div>
             </div>
             <div className="orbit orbit-one" /><div className="orbit orbit-two" />
@@ -164,8 +164,8 @@ function App() {
             <div className="resume-card">
               <FileText size={30} />
               <div><h3>Gokul S — MERN Stack Developer</h3><p>Updated September 2026 · PDF format</p></div>
-              <a className="button button-dark" href="/resume.pdf" target="_blank" rel="noreferrer">Open resume <ArrowUpRight size={16} /></a>
-              <a className="resume-download" href="/resume.pdf" download><Download size={15} /> Download PDF</a>
+              <a className="button button-dark" href={`${import.meta.env.BASE_URL}resume.pdf`} target="_blank" rel="noreferrer">Open resume <ArrowUpRight size={16} /></a>
+              <a className="resume-download" href={`${import.meta.env.BASE_URL}resume.pdf`} download><Download size={15} /> Download PDF</a>
             </div>
           </div>
         </section>

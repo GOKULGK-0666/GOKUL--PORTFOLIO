@@ -9,7 +9,7 @@ const projects = [
     description: 'A final-year team capstone full-stack platform for AI-driven cybersecurity intelligence gathering, real-time threat monitoring, data visualization, and structured reporting, built with React, TypeScript, Node.js, and MongoDB.',
     tags: ['React', 'TypeScript', 'Node.js', 'MongoDB'],
     color: 'coral',
-    video: '/assets/project-videos/cyberintel.mp4',
+    video: `${import.meta.env.BASE_URL}assets/project-videos/cyberintel.mp4`,
   },
   {
     number: '02',
@@ -18,7 +18,7 @@ const projects = [
     description: 'A responsive food ordering platform with menu listings, cart functionality, clean state management, and RESTful APIs for core commerce features.',
     tags: ['React', 'Node.js', 'Express.js', 'MongoDB'],
     color: 'blue',
-    video: '/assets/project-videos/e-commerce.mp4',
+    video: `${import.meta.env.BASE_URL}assets/project-videos/e-commerce.mp4`,
   },
   {
     number: '03',
@@ -27,7 +27,7 @@ const projects = [
     description: 'A responsive Netflix-inspired application that fetches real-time movie and TV content from the TMDB API, with routing and conditional rendering.',
     tags: ['React', 'Node.js', 'CSS3', 'TMDB API'],
     color: 'green',
-    video: '/assets/project-videos/netflix-clone.mp4',
+    video: `${import.meta.env.BASE_URL}assets/project-videos/netflix-clone.mp4`,
   },
 ]
 
@@ -82,8 +82,8 @@ function Projects() {
           </div>
         ))}
       </div>
-      <a className="projects-more view-more" href="https://github.com/GOKULGK-0666" target="_blank" rel="noreferrer">
-        View all projects <ExternalLink size={14} />
+      <a className="projects-more view-more" href="https://github.com/GOKULGK-0666/GOKUL--PORTFOLIO" target="_blank" rel="noreferrer">
+        View portfolio source <ExternalLink size={14} />
       </a>
     </section>
   )
